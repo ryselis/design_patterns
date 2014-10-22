@@ -1,3 +1,5 @@
+import Builder.Director;
+import Builder.PizzaBuilder;
 import Factory.Factory;
 import Observer.RealObserver;
 import Observer.RealSubject;
@@ -12,6 +14,7 @@ public class Main {
         testStategy();
         testObserver();
         testFactory();
+        testBuilder();
     }
 
     public static void testStategy(){
@@ -32,5 +35,10 @@ public class Main {
         Factory factory = new Factory();
         factory.create(0).consume();
         factory.create(1).consume();
+    }
+
+    public static void testBuilder(){
+        Director director = new Director();
+        director.makeBestPizzaEver();
     }
 }
